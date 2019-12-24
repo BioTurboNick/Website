@@ -42,10 +42,11 @@ a {
 
 #info {
     margin: 0 5% 0 5%;
+    min-width: 60%;
 }
 
 #profilephoto {
-    object-fit:contain;
+    object-fit: contain;
     max-width: 30%;
     max-height: 100%;
 }
