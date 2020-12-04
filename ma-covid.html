@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="covid-style.css" />
+    <title>Massachusetts COVID-19 Data</title>
+</head>
+
+<body>
+    <section class="card">
+        <div class="info">
+            <div id="header">
+                <h1>Massachusetts COVID-19 Data</h1>
+                <h2>Nicholas C. Bauer PhD (<a href="index.html">CV</a>) (<a href="https://www.twitter.com/BioTurboNick">Twitter</a>)</h2>
+            </div>
+            <h3>Contents</h3>
+            <ul>
+                <li><a href="#week">Massachusetts COVID-19 Risk Map (current week)</a></li>
+                <li><a href="#animation">Massachusetts COVID-19 Risk Map (animation)</a></li>
+                <li><a href="#boston">Boston COVID-19 Weekly Incidence</a></li>
+                <li><a href="#geo">United States Geographic Extent</a></li>
+            </ul>
+            <h3>Rationale</h3>
+            <p>Since May, Massachusetts has used a definition for COVID-19 risk level based on
+                the daily incidence by population over the previous two weeks. It was a reasonable
+                system, if not used effectively.</p>
+            <p>Governor Charlie Baker made clear that his primary goal is to keep the economy
+                going and schools open. Not suppressing spread of the virus.</p>
+            <p>So what does he do when cases start to explode? Change the risk levels.</p>
+            <p>Under the new system, every community that was previously medium risk and just
+                barely high risk was now "low risk".</p>
+            <p>Under the new system, every community that was previously solidly high risk was
+                deemed "medium risk" so long as their testing positivity was low enough.</p>
+            <p>And for some reason, the thresholds were adjusted slightly for three population
+                categories. Even though incidence is already expressed on a per-population basis.
+                And something about not wanting to "penalize" cities for testing more?</p>
+            <p>(I watched the press conference revealing the new system, Gov. Baker couldn't
+                clearly articulate the rationale for any of this.)</p>
+            <p>That said, he gave away the real rationale: <a href="https://boston.cbslocal.com/2020/11/06/governor-charlie-baker-update-friday-coronavirus-massachusetts-schools-transmission-rates/">Moving the goal posts to keep schools open.</a></p>
+            <p>As a result, I started generating maps using the old system, with some tweaks to
+                reveal communities with 0 cases, and added additional shades of red to show off
+                increases within the high risk category. Code (in <a href="https://www.julialang.org">Julia</a>)
+                is available on <a href="https://www.github.com/BioTurboNick/MassCovid.jl">GitHub</a>.</p>
+            <p>The maps are updated after the <a href="https://www.mass.gov/info-details/covid-19-response-reporting#covid-19-weekly-public-health-report-">Massachusetts Weekly Public Health Report</a> is released each week.</p>
+            <p>I also maintain a graph of the incidence rate in Boston neighborhoods and an overview of COVID behavior across the US.</p>
+        </div>
+    </section>
+    <section class="card" id="week">
+        <div class="info">
+            <h2>Massachusetts COVID-19 Risk Map (current week)</h2>
+            <img src="current_week_map.png"/>
+        </div>
+    </section>
+    <section class="card" id="animation">
+        <div class="info">
+            <h2>Massachusetts COVID-19 Risk Map (animation)</h2>
+            <img src="animation_map.gif"/>
+        </div>
+    </section>
+    <section class="card" id="boston">
+        <div class="info">
+            <h2>Boston COVID-19 Weekly Incidence</h2>
+            <img src="boston_incidence.png"/>
+            <p>Data from the <a href="https://bphc.org/">Boston Public Health Commission</a> weekly
+                report, which is usually released on Fridays. Massachusetts reopening stages are marked.
+                Second axis goes along with the "Overall" dashed line. Some cases aren't assigned to a
+                neighborhood, which is why the Boston line sometimes departs from the stack.</p>
+            <p>Isn't it odd how we were doing great until we started reopening?</p>
+        </div>
+    </section>
+    <section class="card" id="geo">
+        <div class="info">
+            <h2>United States Geographic Extent</h2>
+            <img src="us_geographic_extent.png"/>
+            <p>Since May 20, I've been manually tracking whether each state (+ PR/DC) has been seeing
+                COVID-19 cases increase, plateau, decrease slightly, or decrease strongly.</p>
+            <p>November 22, 2020 - the first time that every single state/territory is in the "up"
+                category simultaneously.</p>
+        </div>
+    </section>
+    <footer>
+        © 2020 Nicholas C Bauer PhD
+    </footer>
+</body>
+
+</html>
+

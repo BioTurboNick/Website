@@ -1,0 +1,58 @@
+body {
+    font-family: "Calibri", "Arial", Sans-serif;
+    color:#eee;
+    background-color: #440d0d;
+}
+
+h1 {
+    color:#fcc;
+    margin-bottom: -0.5em;
+}
+
+h2 {
+    color:#faa;
+    font-size: 1.25em;
+}
+
+h3 {
+    color:#faa;
+    font-size: 1em;
+    margin-bottom: -0.25em;
+}
+
+b {
+    color:#f88;
+}
+
+a {
+    color: #f55;
+    text-decoration: none;
+}
+
+#header {
+    margin-bottom: 2em;
+}
+
+.card {
+    margin: 2% 10% 2% 10%;
+    min-width: 250px;
+    background-color: #111;
+    padding: 0 0 1% 0;
+}
+
+.info {
+    padding: 1em;
+    margin: 0 1em 0 1em;
+    min-width: 60%;
+}
+
+img {
+    display: block;
+    object-fit: scale-down;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+}
